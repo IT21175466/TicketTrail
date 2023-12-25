@@ -2,21 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:tickettrail/constants/app_colors.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
-  final Widget title;
+  final Widget leadingIcon;
+  final Function onTap;
 
-  CustomAppBar({required this.title});
+  CustomAppBar(this.leadingIcon, this.onTap);
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      leading: IconButton(
-        icon: Icon(
-          Icons.menu,
-          color: Colors.white,
-        ),
-        onPressed: () {},
+      leading: leadingIcon,
+      title: SizedBox(
+        height: 20,
+        child: Image.asset('assets/images/ticketTrail.png'),
       ),
-      title: title,
       centerTitle: true,
       backgroundColor: AppColors.primaryColor,
       elevation: 0,

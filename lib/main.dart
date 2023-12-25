@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
           primaryColor: AppColors.primaryColor,
           fontFamily: 'Poppins',
         ),
-        initialRoute: '/home',
+        initialRoute: '/results',
         routes: AppRoutes.getRoutes(),
       ),
     );

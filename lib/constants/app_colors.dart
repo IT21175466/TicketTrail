@@ -5,7 +5,7 @@ class AppColors {
   static const Color accentColor = Color.fromARGB(255, 225, 225, 0);
 
   // Text colors
-  static const Color textColor = Color.fromARGB(255, 0, 0, 0);
+  static const Color textColor = Color.fromARGB(255, 98, 98, 97);
 
   //Gray
   static const Color grayColor = Color.fromARGB(255, 197, 197, 197);

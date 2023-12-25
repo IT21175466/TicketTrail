@@ -19,10 +19,11 @@ class _HomePageState extends State<HomePage> {
     double screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: CustomAppBar(
-        title: SizedBox(
-          height: 20,
-          child: Image.asset('assets/images/ticketTrail.png'),
+        Icon(
+          Icons.menu,
+          color: Colors.white,
         ),
+        () {},
       ),
       body: SingleChildScrollView(
         child: Column(
