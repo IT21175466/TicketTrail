@@ -129,10 +129,19 @@ class _HomePageState extends State<HomePage> {
                     ),
                     GestureDetector(
                       onTap: () {
-                        citySelectProvider
-                            .setCityFromValue(fromController.text);
-                        citySelectProvider.setCitytoValue(toController.text);
-                        Navigator.pushNamed(context, '/results');
+                        if (fromController.text.isEmpty ||
+                            toController.text.isEmpty) {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(
+                              content: Text("Please Select Locations"),
+                            ),
+                          );
+                        } else {
+                          citySelectProvider
+                              .setCityFromValue(fromController.text);
+                          citySelectProvider.setCitytoValue(toController.text);
+                          Navigator.pushNamed(context, '/results');
+                        }
                       },
                       child: CustomButton(
                         text: 'Search Bus',
