@@ -27,6 +27,7 @@ class BusCard extends StatelessWidget {
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
     return Container(
+      margin: EdgeInsets.symmetric(vertical: 5),
       width: screenWidth,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
