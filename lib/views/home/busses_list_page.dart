@@ -4,7 +4,6 @@ import 'package:tickettrail/constants/app_colors.dart';
 import 'package:tickettrail/providers/city_select_provider.dart';
 import 'package:tickettrail/widgets/bus_card.dart';
 import 'package:tickettrail/widgets/custom_app_bar.dart';
-import 'package:tickettrail/widgets/custom_text_filed.dart';
 
 class BusListPage extends StatefulWidget {
   const BusListPage({super.key});
@@ -15,6 +14,7 @@ class BusListPage extends StatefulWidget {
 
 class _BusListPageState extends State<BusListPage> {
   final TextEditingController fromController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -48,7 +48,7 @@ class _BusListPageState extends State<BusListPage> {
                       SizedBox(
                         width: 5,
                       ),
-                      Text("From"),
+                      Text("From  "),
                       SizedBox(
                         width: 10,
                       ),
@@ -76,7 +76,7 @@ class _BusListPageState extends State<BusListPage> {
                         width: 5,
                       ),
                       Text(
-                        "To     ",
+                        "To       ",
                       ),
                       SizedBox(
                         width: 10,
@@ -91,13 +91,37 @@ class _BusListPageState extends State<BusListPage> {
                     ],
                   ),
                 ),
-                CustomTextField(
-                  controller: fromController,
-                  labelText: 'Date',
-                  icon: Icon(
-                    Icons.calendar_month,
-                    color: AppColors.grayColor,
+                SizedBox(
+                  height: 5,
+                ),
+                Container(
+                  child: Row(
+                    children: [
+                      Icon(
+                        Icons.calendar_month,
+                        color: AppColors.grayColor,
+                      ),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      Text(
+                        "Date   ",
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Text(
+                        citySelectProvider.formattedDate!,
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ],
                   ),
+                ),
+                SizedBox(
+                  height: 15,
                 ),
                 BusCard(
                   busName: 'Harsha Travels',

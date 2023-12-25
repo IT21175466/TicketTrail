@@ -5,7 +5,6 @@ import 'package:tickettrail/providers/city_select_provider.dart';
 import 'package:tickettrail/widgets/city_dropdown.dart';
 import 'package:tickettrail/widgets/custom_app_bar.dart';
 import 'package:tickettrail/widgets/custom_button.dart';
-import 'package:tickettrail/widgets/custom_text_filed.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -16,6 +15,12 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final TextEditingController sampleController = TextEditingController();
+
+  @override
+  void initState() {
+    super.initState();
+    Provider.of<CitySelectProvider>(context, listen: false).getTodayDate();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -83,16 +88,44 @@ class _HomePageState extends State<HomePage> {
                       ),
                       controller: toController,
                     ),
-                    CustomTextField(
-                      controller: sampleController,
-                      labelText: 'Date',
-                      icon: Icon(
-                        Icons.calendar_month,
-                        color: AppColors.grayColor,
+                    Container(
+                      margin: const EdgeInsets.symmetric(vertical: 5),
+                      height: 50,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        border: Border.all(
+                          color: AppColors.grayColor,
+                          width: 0.5,
+                        ),
+                      ),
+                      child: Row(
+                        children: [
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Icon(
+                            Icons.calendar_month,
+                            color: AppColors.grayColor,
+                          ),
+                          SizedBox(
+                            width: 5,
+                          ),
+                          Text("Date - "),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Text(
+                            citySelectProvider.formattedDate!,
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                     SizedBox(
-                      height: 30,
+                      height: 50,
                     ),
                     GestureDetector(
                       onTap: () {
