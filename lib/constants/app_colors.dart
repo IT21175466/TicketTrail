@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class AppColors {
-  static const Color primaryColor = Color.fromARGB(255, 255, 255, 255);
+  static const Color primaryColor = Color.fromARGB(255, 95, 103, 236);
   static const Color accentColor = Color.fromARGB(255, 225, 225, 0);
 
   // Text colors
@@ -18,4 +18,6 @@ class AppColors {
 
   // Button colors
   static const Color buttonColor = Color.fromARGB(225, 225, 225, 0);
+
+  static const Color borderColor = Color.fromARGB(225, 217, 217, 217);
 }
