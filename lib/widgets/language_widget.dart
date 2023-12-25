@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:tickettrail/constants/app_colors.dart';
 
 class CustomLanguageWidget extends StatelessWidget {
@@ -27,8 +26,8 @@ class CustomLanguageWidget extends StatelessWidget {
         child: Center(
           child: Text(
             languageText,
-            style: GoogleFonts.poppins(
-              fontSize: 24,
+            style: TextStyle(
+              fontSize: 22,
               fontWeight: FontWeight.w500,
             ),
           ),

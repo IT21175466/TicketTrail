@@ -8,7 +8,7 @@ class AppColors {
   static const Color textColor = Color.fromARGB(255, 0, 0, 0);
 
   //Gray
-  static const Color grayColor = Color.fromARGB(255, 98, 103, 106);
+  static const Color grayColor = Color.fromARGB(255, 197, 197, 197);
 
   // Other colors
   static const Color errorColor = Colors.red;
@@ -17,7 +17,7 @@ class AppColors {
   static const Color appBarColor = Colors.blueAccent;
 
   // Button colors
-  static const Color buttonColor = Color.fromARGB(225, 225, 225, 0);
+  static const Color buttonColor = Color.fromARGB(225, 251, 144, 87);
 
   static const Color borderColor = Color.fromARGB(225, 217, 217, 217);
 }
