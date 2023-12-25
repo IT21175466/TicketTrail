@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:tickettrail/constants/app_colors.dart';
+import 'package:tickettrail/providers/city_select_provider.dart';
 import 'package:tickettrail/providers/language_provider.dart';
 import 'package:tickettrail/routes/app_routes.dart';
 
@@ -15,6 +16,7 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (context) => LanguageProvider()),
+        ChangeNotifierProvider(create: (context) => CitySelectProvider()),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
@@ -22,7 +24,7 @@ class MyApp extends StatelessWidget {
           primaryColor: AppColors.primaryColor,
           fontFamily: 'Poppins',
         ),
-        initialRoute: '/results',
+        initialRoute: '/home',
         routes: AppRoutes.getRoutes(),
       ),
     );

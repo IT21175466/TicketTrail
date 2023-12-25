@@ -179,15 +179,27 @@ class BusCard extends StatelessWidget {
                 Spacer(),
                 Row(
                   children: [
-                    Text(
-                      'Available Seats',
-                      style: TextStyle(
-                        fontSize: 11,
-                        color: AppColors.textColor,
-                      ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Available',
+                          style: TextStyle(
+                            fontSize: 11,
+                            color: AppColors.textColor,
+                          ),
+                        ),
+                        Text(
+                          'Seats',
+                          style: TextStyle(
+                            fontSize: 11,
+                            color: AppColors.textColor,
+                          ),
+                        ),
+                      ],
                     ),
                     SizedBox(
-                      width: 5,
+                      width: 10,
                     ),
                     Text(
                       seats.toString(),
