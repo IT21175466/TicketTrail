@@ -20,4 +20,6 @@ class AppColors {
   static const Color buttonColor = Color.fromARGB(225, 251, 144, 87);
 
   static const Color borderColor = Color.fromARGB(225, 217, 217, 217);
+
+  static const Color iconColor = Color.fromARGB(225, 98, 98, 98);
 }
