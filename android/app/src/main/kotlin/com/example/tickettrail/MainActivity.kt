@@ -1,4 +1,4 @@
-package com.example.tickettrail
+package com.tickettrail.lk
 
 import io.flutter.embedding.android.FlutterActivity
 
