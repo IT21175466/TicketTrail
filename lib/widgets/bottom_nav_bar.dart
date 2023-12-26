@@ -18,28 +18,24 @@ class CustomBottomNavigationBar extends StatelessWidget {
             BottomNavigationBarItem(
               icon: Icon(
                 Icons.home_outlined,
-                color: AppColors.iconColor,
               ),
               label: "Home",
             ),
             BottomNavigationBarItem(
               icon: Icon(
                 Icons.badge_outlined,
-                color: AppColors.iconColor,
               ),
               label: "Business",
             ),
             BottomNavigationBarItem(
               icon: Icon(
                 Icons.notifications_none_outlined,
-                color: AppColors.iconColor,
               ),
               label: "Notification",
             ),
             BottomNavigationBarItem(
               icon: Icon(
                 Icons.person_2_outlined,
-                color: AppColors.iconColor,
               ),
               label: "My Info",
             ),
