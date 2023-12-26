@@ -6,10 +6,13 @@ import 'package:tickettrail/providers/bottom_navbar_provider.dart';
 import 'package:tickettrail/providers/city_select_provider.dart';
 import 'package:tickettrail/providers/language_provider.dart';
 import 'package:tickettrail/routes/app_routes.dart';
+import 'firebase_options.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MyApp());
 }
 

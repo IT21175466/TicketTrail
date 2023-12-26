@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "95821043563",
+    "project_id": "tickettrail-d3f58",
+    "storage_bucket": "tickettrail-d3f58.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:95821043563:android:e622609e07c720449b9e2e",
+        "android_client_info": {
+          "package_name": "com.tickettrail.lk"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDncJ55Vi4fuYzSWtIomyWVYblAT3lXbpo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
